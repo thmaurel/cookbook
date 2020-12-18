@@ -1,0 +1,6 @@
+<h1><%= @ingredient.name.capitalize %></h1>
+
+<h2>Les recettes associées :</h2>
+<% @recipes.each do |recipe| %>
+  <p><strong><%= recipe[:title] %></strong> : <%= recipe[:desc] %></p>
+<% end %>
