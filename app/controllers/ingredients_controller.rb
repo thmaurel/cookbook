@@ -7,6 +7,7 @@ class IngredientsController < ApplicationController
 
   def show
     @recipes = ScraperService.new(@ingredient.name).call
+    TestJob.perform_later
   end
 
   def new
